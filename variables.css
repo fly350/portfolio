@@ -1,0 +1,19 @@
+:root {
+    --primary-color: #ffffff;
+    --secondary-color: #86868b;
+    --accent-color: #0066cc;
+    --text-color: #ffffff;
+    --text-light: #86868b;
+    --bg-dark: #000000;
+    --bg-light: #1a1a1a;
+    --card-bg: rgba(0, 0, 0, 0.8);
+    --gradient-start: #000000;
+    --gradient-end: #1a1a1a;
+    --shadow-color: rgba(0, 0, 0, 0.3);
+    --border-color: rgba(255, 255, 255, 0.1);
+    --hover-color: rgba(255, 255, 255, 0.1);
+    --text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --font-primary: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', sans-serif;
+    --font-display: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Helvetica Neue', sans-serif;
+} 

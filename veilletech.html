@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="animations.css">
+    <link rel="stylesheet" href="veilletech.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Veille Technologique - Portfolio</title>
+</head>
+    
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-solid">
+        <div class="container">
+            <ul class="onglets">
+                <div class="ptf">
+                    <h1>Portfolio</h1>
+                    <p>THEOPHILE-ADON LUKAS</p>
+                </div>
+
+                <li class="menu"><h4>MENU</h4></li>
+                <li><a href="index.html"><i class="fas fa-home"></i> Accueil</a></li>
+                <li><a href="monbts.html"><i class="fas fa-graduation-cap"></i> Mon BTS</a></li>
+                <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+                <li><a href="mesProjets.html"><i class="fas fa-project-diagram"></i> Projets</a></li>
+                <li><a href="apropos.html"><i class="fas fa-user"></i> À propos</a></li>
+                <li><a href="veilletech.html"><i class="fas fa-newspaper"></i> Veille Tech</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Vidéo de fond -->
+    <video autoplay loop muted playsinline>
+        <source src="media/fdc_vdo.mp4" type="video/mp4">
+    </video>
+
+    <!-- Section Veille Technologique -->
+    <section class="veille-section section">
+        <div class="container">
+            <h2 class="section-title"><i class="fas fa-newspaper"></i> Veille Technologique</h2>
+            
+            <div class="veille-grid">
+                <!-- Outils de Veille -->
+                <div class="veille-card card">
+                    <h3><i class="fas fa-tools"></i> Mes Outils de Veille</h3>
+                    <div class="veille-content">
+                        <div class="tool-item">
+                            <i class="fab fa-youtube"></i>
+                            <h4>YouTube</h4>
+                            <p>Suivi des dernières avancées scientifiques et technologiques</p>
+                        </div>
+                        <div class="tool-item">
+                            <i class="fab fa-twitter"></i>
+                            <h4>Twitter</h4>
+                            <p>Suivi des actualités tech en temps réel</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Thématiques -->
+                <div class="veille-card card">
+                    <h3><i class="fas fa-lightbulb"></i> Thématiques Suivies</h3>
+                    <div class="veille-content">
+                        <ul class="themes-list">
+                            <li><i class="fas fa-code"></i> Développement Web</li>
+                            <li><i class="fas fa-shield-alt"></i> Cybersécurité</li>
+                            <li><i class="fas fa-cloud"></i> Cloud Computing</li>
+                            <li><i class="fas fa-robot"></i> Intelligence Artificielle</li>
+                            <li>
+                                <a href="https://www.youtube.com/@Bitcoin" target="_blank" class="bitcoin-link">
+                                    <i class="fab fa-bitcoin"></i> Cryptomonnaies
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2024 THEOPHILE-ADON LUKAS. Tous droits réservés.</p>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/lukas-theophile-adon-6044962aa/"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Animation au défilement
+        document.addEventListener('DOMContentLoaded', function() {
+            const sections = document.querySelectorAll('.section');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+        });
+    </script>
+</body>
+</html>

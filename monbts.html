@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="animations.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Mon BTS SIO - Portfolio</title>
+</head>
+  
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-solid">
+        <div class="container">
+            <ul class="onglets">
+                <div class="ptf">
+                    <h1>Portfolio</h1>
+                    <p>THEOPHILE-ADON LUKAS</p>
+                </div>
+
+                <li class="menu"><h4>MENU</h4></li>
+                <li><a href="index.html"><i class="fas fa-home"></i> Accueil</a></li>
+                <li><a href="monbts.html"><i class="fas fa-graduation-cap"></i> Mon BTS</a></li>
+                <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+                <li><a href="mesProjets.html"><i class="fas fa-project-diagram"></i> Projets</a></li>
+                <li><a href="apropos.html"><i class="fas fa-user"></i> À propos</a></li>
+                <li><a href="veilletech.html"><i class="fas fa-newspaper"></i> Veille Tech</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Vidéo de fond -->
+    <video autoplay loop muted playsinline>
+        <source src="media/fdc_vdo.mp4" type="video/mp4">
+    </video>
+
+    <!-- Section BTS -->
+    <section class="bts section">
+        <div class="container">
+            <div class="moi card">
+                <h2><i class="fas fa-graduation-cap"></i> Mon BTS SIO</h2>
+                <p>
+                    Je suis actuellement en BTS SIO (Services Informatiques aux Organisations), 
+                    un diplôme d'enseignement supérieur de niveau bac+2 en France. Cette formation 
+                    de deux années se concentre sur les technologies de l'information et de la 
+                    communication (TIC).
+                </p>
+
+                <h3><i class="fas fa-server"></i> Option SISR</h3>
+                <p>
+                    J'ai choisi l'option Solutions d'Infrastructure, Systèmes et Réseaux (SISR), 
+                    qui met l'accent sur la conception, la mise en place, la sécurité et la 
+                    maintenance des infrastructures informatiques. Cette formation me permet d'acquérir 
+                    des compétences essentielles dans :
+                </p>
+                <ul class="skills-list">
+                    <li><i class="fas fa-network-wired"></i> La gestion des réseaux informatiques</li>
+                    <li><i class="fas fa-server"></i> L'administration des serveurs</li>
+                    <li><i class="fas fa-shield-alt"></i> La sécurité des systèmes</li>
+                    <li><i class="fas fa-tools"></i> La résolution des problèmes d'infrastructure</li>
+                </ul>
+
+                <h3><i class="fas fa-code"></i> Option SLAM</h3>
+                <p>
+                    L'option Solutions Logicielles et Applications Métiers (SLAM) est également 
+                    disponible dans notre formation. Cette option se concentre sur le développement 
+                    d'applications logicielles et la gestion de projets informatiques, permettant 
+                    d'acquérir des compétences en :
+                </p>
+                <ul class="skills-list">
+                    <li><i class="fas fa-laptop-code"></i> Programmation et développement</li>
+                    <li><i class="fas fa-tasks"></i> Gestion de projets logiciels</li>
+                    <li><i class="fas fa-search"></i> Analyse des besoins</li>
+                    <li><i class="fas fa-bug"></i> Tests et maintenance des applications</li>
+                </ul>
+
+                <p>
+                    Le BTS SIO forme des professionnels polyvalents capables de répondre aux 
+                    besoins informatiques des entreprises. Après l'obtention du diplôme, les 
+                    diplômés peuvent intégrer le marché du travail ou poursuivre leurs études 
+                    dans le domaine de l'informatique.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2024 THEOPHILE-ADON LUKAS. Tous droits réservés.</p>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/lukas-theophile-adon-6044962aa/"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Animation au défilement
+        document.addEventListener('DOMContentLoaded', function() {
+            const sections = document.querySelectorAll('.section');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+        });
+    </script>
+</body>
+</html>

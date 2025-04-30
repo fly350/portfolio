@@ -1,0 +1,283 @@
+@import 'base.css';
+
+body, h1, h2, p, ul {
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+.home{
+    color: #ffffff; 
+    text-align: center;
+}
+
+a {
+    color: rgb(255, 255, 255);
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #222222;
+    color: #333;
+}
+
+/* Barre de navigation */
+
+.navbar {
+    background-color: #000000;
+    color: #ffffff;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 10px;
+    text-align: center;
+    position: relative;
+}
+
+.onglets {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+
+.onglets li {
+    margin: 0;
+}
+
+.menu h4 {
+    font-size: 24px;
+    color: #ffffff;
+    margin: 0;
+}
+
+/* Styles spécifiques à la section BTS */
+.bts {
+    color: white;
+    background-color: #000000;
+    opacity: 5px; /* Cette ligne peut causer un problème, veuillez la corriger si nécessaire */
+    text-align: center;
+    padding: 7px 14px;
+    border-radius: 5px;
+}
+
+/* Style de la vidéo */
+video {
+    display: flex;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+    filter: blur(20px);
+    object-fit: cover;
+    opacity: 1;
+}
+
+/* Styles spécifiques à la section header */
+header {
+    background-color: #000000;
+    color: #ffffff;
+    text-align: center;
+    padding: 30px 0;
+}
+
+/* Styles spécifiques aux paragraphes */
+p {
+    text-align: center;
+}
+
+/* Styles spécifiques aux titres h4 et h5 */
+h4 {
+    color: #fff;
+    text-align: center;
+}
+
+h5 {
+    color: white;
+    text-align: center;
+}
+
+/* Styles spécifiques à la liste ul li */
+ul li {
+    display: inline-block;
+    margin-right: 10px;
+    background-color: #000000;
+    color: #fff;
+    padding: 8px 15px;
+    border-radius: 5px;
+}
+
+/* Style spécifique au footer */
+footer {
+    background-color: #000000;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Section Veille Technologique */
+.veille-section {
+    padding: 120px 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.veille-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.veille-card {
+    padding: 40px;
+    background: var(--card-bg);
+    border-radius: 20px;
+    box-shadow: 0 4px 24px var(--shadow-color);
+    border: 1px solid var(--border-color);
+    animation: fadeInUp 0.8s ease forwards;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.veille-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 32px var(--shadow-color);
+}
+
+.veille-card h3 {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+    color: var(--text-color);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.veille-card h3 i {
+    color: var(--accent-color);
+}
+
+.veille-content {
+    color: var(--text-light);
+}
+
+.tool-item {
+    margin-bottom: 30px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+.tool-item:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateX(10px);
+}
+
+.tool-item i {
+    font-size: 2rem;
+    color: var(--accent-color);
+    margin-bottom: 15px;
+}
+
+.tool-item h4 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    color: var(--text-color);
+}
+
+.tool-item p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.themes-list {
+    list-style: none;
+    padding: 0;
+}
+
+.themes-list li {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+.themes-list li:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateX(10px);
+}
+
+.themes-list li i {
+    font-size: 1.5rem;
+    color: var(--accent-color);
+}
+
+.themes-list li {
+    font-size: 1.1rem;
+    color: var(--text-color);
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .veille-grid {
+        grid-template-columns: 1fr;
+        padding: 0 20px;
+    }
+
+    .veille-card {
+        padding: 30px 20px;
+    }
+
+    .veille-card h3 {
+        font-size: 1.5rem;
+    }
+
+    .tool-item h4 {
+        font-size: 1.2rem;
+    }
+}
+
+/* Styles pour le lien Bitcoin */
+.bitcoin-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--text-light);
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.bitcoin-link:hover {
+    color: #f7931a; /* Couleur Bitcoin */
+    transform: translateY(-2px);
+}
+
+.bitcoin-link i {
+    color: inherit;
+}
