@@ -1,0 +1,74 @@
+/* Animation d'entrée pour la page */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animation pour le menu */
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+        background-color: rgba(255, 255, 255, 0.9);
+    }
+    to {
+        transform: translateX(0);
+        background-color: rgba(255, 255, 255, 1);
+    }
+}
+
+/* Animation pour la vidéo */
+@keyframes videoFadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Application des animations */
+body {
+    animation: fadeIn 1s ease-out;
+}
+
+.navbar {
+    animation: slideIn 0.5s ease-out;
+}
+
+video {
+    animation: videoFadeIn 1.5s ease-out;
+}
+
+/* Animation pour les sections */
+.section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease-out;
+}
+
+.section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Animation des liens du menu */
+.navbar .onglets li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: var(--primary-color);
+    transition: width 0.3s ease;
+}
+
+.navbar .onglets li a:hover::after {
+    width: 100%;
+} 
