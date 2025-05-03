@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="navbar.css">
     <link rel="stylesheet" href="animations.css">
+    <link rel="stylesheet" href="black-background.css">
+    <link rel="stylesheet" href="formation.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <title>Mon BTS SIO - Portfolio</title>
@@ -33,10 +35,8 @@
         </div>
     </nav>
 
-    <!-- Vidéo de fond -->
-    <video autoplay loop muted playsinline>
-        <source src="media/fdc_vdo.mp4" type="video/mp4">
-    </video>
+    <!-- Fond noir -->
+    <div class="black-background"></div>
 
     <!-- Section BTS -->
     <section class="bts section">
@@ -46,30 +46,61 @@
                 <p>
                     Je suis actuellement en BTS SIO (Services Informatiques aux Organisations), 
                     un diplôme d'enseignement supérieur de niveau bac+2 en France. Cette formation 
-                    de deux années se concentre sur les technologies de l'information et de la 
-                    communication (TIC).
+                    de deux années se concentre sur les Technologies de l'Information et de la 
+                    Communication (TIC).
                 </p>
-
+<br>
+<br>
                 <h3><i class="fas fa-server"></i> Option SISR</h3>
                 <p>
-                    J'ai choisi l'option Solutions d'Infrastructure, Systèmes et Réseaux (SISR), 
+                    J'ai choisi l'option Solutions d'infrastructures, Systèmes et Réseaux (SISR), 
                     qui met l'accent sur la conception, la mise en place, la sécurité et la 
                     maintenance des infrastructures informatiques. Cette formation me permet d'acquérir 
-                    des compétences essentielles dans :
+                    des compétences essentielles dans les dommaines suivants :
                 </p>
                 <ul class="skills-list">
                     <li><i class="fas fa-network-wired"></i> La gestion des réseaux informatiques</li>
                     <li><i class="fas fa-server"></i> L'administration des serveurs</li>
                     <li><i class="fas fa-shield-alt"></i> La sécurité des systèmes</li>
-                    <li><i class="fas fa-tools"></i> La résolution des problèmes d'infrastructure</li>
+                    <li><i class="fas fa-tools"></i> La résolution des problèmes d'infrastructures</li>
                 </ul>
+
+                <h3><i class="fas fa-book"></i> Programme de Formation SISR</h3>
+                <div class="formation-grid">
+                    <div class="formation-column">
+                        <h4><i class="fas fa-graduation-cap"></i> Enseignements Généraux</h4>
+                        <ul class="skills-list">
+                            <li><i class="fas fa-language"></i> Culture générale et expression</li>
+                            <li><i class="fas fa-globe"></i> Anglais</li>
+                            <li><i class="fas fa-calculator"></i> Mathématiques</li>
+                            <li><i class="fas fa-balance-scale"></i> Culture économique, juridique et managériale</li>
+                        </ul>
+                    </div>
+                    <div class="formation-column">
+                        <h4><i class="fas fa-laptop-code"></i> Enseignements Professionnels</h4>
+                        <ul class="skills-list">
+                            <li><i class="fas fa-code"></i> Développement</li>
+                            <li><i class="fas fa-database"></i> Bases de données</li>
+                            <li><i class="fas fa-shield-alt"></i> Cybersécurité</li>
+                            <li><i class="fas fa-network-wired"></i> Réseaux</li>
+                            <li><i class="fas fa-desktop"></i> Systèmes d'exploitation</li>
+                        </ul>
+                    </div>
+                    <div class="formation-column">
+                        <h4><i class="fas fa-briefcase"></i> Projets et Stages</h4>
+                        <ul class="skills-list">
+                            <li><i class="fas fa-calendar-alt"></i> Stage de première année (6 semaines)</li>
+                            <li><i class="fas fa-calendar-check"></i> Stage de deuxième année (6 semaines)</li>
+                        </ul>
+                    </div>
+                </div>
 
                 <h3><i class="fas fa-code"></i> Option SLAM</h3>
                 <p>
                     L'option Solutions Logicielles et Applications Métiers (SLAM) est également 
                     disponible dans notre formation. Cette option se concentre sur le développement 
                     d'applications logicielles et la gestion de projets informatiques, permettant 
-                    d'acquérir des compétences en :
+                    d'acquérir les compétences suivantes :
                 </p>
                 <ul class="skills-list">
                     <li><i class="fas fa-laptop-code"></i> Programmation et développement</li>
@@ -78,10 +109,40 @@
                     <li><i class="fas fa-bug"></i> Tests et maintenance des applications</li>
                 </ul>
 
+                <h3><i class="fas fa-book"></i> Programme de Formation SLAM</h3>
+                <div class="formation-grid">
+                    <div class="formation-column">
+                        <h4><i class="fas fa-graduation-cap"></i> Enseignements Généraux</h4>
+                        <ul class="skills-list">
+                            <li><i class="fas fa-language"></i> Culture générale et expression</li>
+                            <li><i class="fas fa-globe"></i> Anglais</li>
+                            <li><i class="fas fa-calculator"></i> Mathématiques</li>
+                            <li><i class="fas fa-balance-scale"></i> Culture économique, juridique et managériale</li>
+                        </ul>
+                    </div>
+                    <div class="formation-column">
+                        <h4><i class="fas fa-laptop-code"></i> Enseignements Professionnels</h4>
+                        <ul class="skills-list">
+                            <li><i class="fas fa-code"></i> Développement d'applications</li>
+                            <li><i class="fas fa-database"></i> Bases de données</li>
+                            <li><i class="fas fa-shield-alt"></i> Cybersécurité</li>
+                            <li><i class="fas fa-tools"></i> Conception et maintenance de solutions logicielles</li>
+                            <li><i class="fas fa-mobile-alt"></i> Applications mobiles et web</li>
+                        </ul>
+                    </div>
+                    <div class="formation-column">
+                        <h4><i class="fas fa-briefcase"></i> Projets et Stages</h4>
+                        <ul class="skills-list">
+                            <li><i class="fas fa-calendar-alt"></i> Stage de première année (6 semaines)</li>
+                            <li><i class="fas fa-calendar-check"></i> Stage de deuxième année (6 semaines)</li>
+                        </ul>
+                    </div>
+                </div>
+
                 <p>
                     Le BTS SIO forme des professionnels polyvalents capables de répondre aux 
-                    besoins informatiques des entreprises. Après l'obtention du diplôme, les 
-                    diplômés peuvent intégrer le marché du travail ou poursuivre leurs études 
+                    besoins informatiques des organisations. Après l'obtention du diplôme, les 
+                    lauréats peuvent intégrer le marché du travail ou poursuivre leurs études 
                     dans le domaine de l'informatique.
                 </p>
             </div>

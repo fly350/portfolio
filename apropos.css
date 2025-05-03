@@ -14,9 +14,13 @@ a {
 }
 
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #222222;
-    color: #333;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1a237e; /* Fond bleu foncé */
+    color: #fff;
+    min-height: 100vh;
+    position: relative;
 }
 
 /* Barre de navigation */
@@ -68,18 +72,7 @@ body {
 
 /* Style de la vidéo */
 video {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    z-index: -1;
-    filter: blur(8px);
-    object-fit: cover;
-    opacity: 0.5;
+    display: none;
 }
 
 /* Styles spécifiques à la section header */
@@ -129,28 +122,214 @@ footer {
 
 /* Styles pour la section About */
 .about-section {
-    padding: 20px 0;
-    min-height: 80vh;
+    padding: 0.5rem 0;
+    min-height: 30vh;
     display: flex;
     align-items: flex-start;
-    margin-top: 20px;
+    margin: 0;
 }
 
 .about-content {
-    background-color: rgba(0, 0, 0, 0.8);
-    padding: 20px;
-    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 1rem;
+    border-radius: 8px;
     margin: 0 auto;
-    max-width: 800px;
+    max-width: 100%;
+    width: 100%;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .about-text {
     text-align: left;
     line-height: 1.6;
-    margin-top: 20px;
+    margin: 0;
+    padding: 0.5rem;
+    width: 100%;
 }
 
 .about-text p {
-    margin-bottom: 15px;
+    margin: 0;
+    padding: 0;
     text-align: left;
+    width: 100%;
+    font-size: 1.1rem;
+    color: #fff;
+}
+
+.skills-section {
+    margin: 0;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 0;
+    padding: 0;
+}
+
+.cv-section {
+    padding: 0;
+    margin: 0;
+}
+
+.cv-content {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 0.3rem;
+    border-radius: 5px;
+}
+
+.cv-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    margin: 0;
+}
+
+.cv-pdf {
+    width: 100%;
+    max-width: 800px;
+    height: 500px;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.cv-actions {
+    text-align: center;
+}
+
+.cv-download-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.8rem 1.5rem;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.cv-download-btn:hover {
+    background-color: #45a049;
+}
+
+.cv-download-btn i {
+    font-size: 1.2rem;
+}
+
+.skills-poles {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 0;
+    margin: 0;
+}
+
+.pole {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 0.3rem;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+
+.pole:hover {
+    transform: translateY(-3px);
+}
+
+.pole h3 {
+    color: #fff;
+    font-size: 0.9rem;
+    margin-bottom: 0.2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.2rem;
+}
+
+.pole h3 i {
+    color: #4CAF50;
+}
+
+.pole .skills-list {
+    list-style: none;
+    padding: 0;
+}
+
+.pole .skills-list li {
+    margin: 0.2rem 0;
+    font-size: 0.85rem;
+}
+
+.pole .skills-list li i {
+    color: #4CAF50;
+}
+
+.timeline {
+    position: relative;
+    padding: 1rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 1.5rem;
+    padding-left: 2rem;
+}
+
+.timeline-content {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 1rem;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.timeline-content:hover {
+    transform: translateX(5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.timeline-icon {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #4CAF50;
+    border-radius: 50%;
+    color: white;
+    font-size: 1rem;
+    flex-shrink: 0;
+}
+
+.timeline-text {
+    flex: 1;
+}
+
+.timeline-text h4 {
+    color: #fff;
+    margin: 0;
+    font-size: 1.1rem;
+    margin-bottom: 0.3rem;
+}
+
+.timeline-text p {
+    color: #ccc;
+    margin: 0;
+    font-size: 0.9rem;
 }
