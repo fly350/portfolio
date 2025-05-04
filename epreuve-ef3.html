@@ -7,11 +7,11 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="navbar.css">
     <link rel="stylesheet" href="animations.css">
-    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="epreuves.css">
     <link rel="stylesheet" href="black-background.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <title>Contact - Portfolio</title>
+    <title>Épreuve EF3 - Portfolio</title>
 </head>
   
 <body>
@@ -24,7 +24,6 @@
                     <p>THEOPHILE-ADON LUKAS</p>
                 </div>
 
-                
                 <li><a href="index.html"><i class="fas fa-home"></i> Accueil</a></li>
                 <li><a href="monbts.html"><i class="fas fa-graduation-cap"></i> Mon BTS</a></li>
                 <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
@@ -39,38 +38,37 @@
     <!-- Fond noir -->
     <div class="black-background"></div>
 
-    <!-- Section Contact -->
-    <section class="contact-section section">
-        <div class="contact-container card">
-            <h2 class="contact-title"><i class="fas fa-envelope"></i> Contactez-moi</h2>
+    <!-- Section Épreuve EF3 -->
+    <section class="epreuve-detail-section section">
+        <div class="container">
+            <h2 class="section-title"><i class="fas fa-certificate"></i> Épreuve EF3</h2>
             
-            <form class="contact-form">
-                <div class="form-group">
-                    <label for="name">Nom</label>
-                    <input type="text" id="name" class="form-control" placeholder="Votre nom">
+            <div class="epreuve-detail-content">
+                <div class="epreuve-info">
+                    <h3>Parcours de certification complémentaire</h3>
+                    <div class="epreuve-meta">
+                        <span><i class="fas fa-clock"></i> Durée : 30 min</span>
+                        <span><i class="fas fa-percentage"></i> Coefficient : 2</span>
+                    </div>
                 </div>
-                
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" class="form-control" placeholder="Votre email">
-                </div>
-                
-                <div class="form-group">
-                    <label for="message">Message</label>
-                    <textarea id="message" class="form-control" placeholder="Votre message"></textarea>
-                </div>
-                
-                <button type="submit" class="submit-btn">Envoyer</button>
-            </form>
 
-            <div class="contact-info">
-                <p><i class="fas fa-map-marker-alt"></i> Localisation: Abymes, Guadeloupe</p>
-            </div>
+                <div class="epreuve-introduction">
+                    <div class="intro-content">
+                        <p>Durant ma formation en BTS SIO SISR, j'ai eu l'opportunité de suivre un parcours de certification complémentaire qui m'a permis d'approfondir mes connaissances et d'acquérir des compétences spécifiques dans le domaine des systèmes informatiques.</p>
+                        <p>Ce parcours m'a permis de me spécialiser dans des technologies et des méthodologies essentielles pour mon futur métier d'administrateur systèmes et réseaux.</p>
+                    </div>
+                </div>
 
-            <div class="social-links">
-                <a href="https://www.linkedin.com/in/lukas-theophile-adon-6044962aa/" target="_blank">
-                    <i class="fab fa-linkedin"></i>
-                </a>
+                <div class="epreuve-documents">
+                    <h4><i class="fas fa-file-alt"></i> Documents de présentation</h4>
+                    <div class="documents-grid">
+                        <a href="#" class="document-card" target="_blank">
+                            <i class="fas fa-file-powerpoint"></i>
+                            <h5>Support présentation EF3</h5>
+                            <p>Présentation détaillée de mon parcours certificatif</p>
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -88,25 +86,5 @@
     </footer>
 
     <script src="script.js"></script>
-    <script>
-        // Animation au défilement
-        document.addEventListener('DOMContentLoaded', function() {
-            const sections = document.querySelectorAll('.section');
-            
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('visible');
-                    }
-                });
-            }, {
-                threshold: 0.1
-            });
-
-            sections.forEach(section => {
-                observer.observe(section);
-            });
-        });
-    </script>
 </body>
-</html>
+</html> 
