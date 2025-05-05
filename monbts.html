@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="animations.css">
     <link rel="stylesheet" href="black-background.css">
     <link rel="stylesheet" href="formation.css">
+    <link rel="stylesheet" href="themes.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <title>Mon BTS SIO - Portfolio</title>
@@ -32,23 +33,29 @@
                 <li><a href="apropos.html"><i class="fas fa-user"></i> À propos</a></li>
                 <li><a href="veilletech.html"><i class="fas fa-newspaper"></i> Veille Tech</a></li>
                 <li><a href="epreuves.html"><i class="fas fa-file-alt"></i> Épreuves</a></li>
+                <li><a href="stages.html"><i class="fas fa-briefcase"></i> Stages</a></li>
+                <li><a href="competences.html"><i class="fas fa-tools"></i> Compétences</a></li>
+                <li><button class="theme-toggle" onclick="toggleTheme()"><i class="fas fa-sun"></i></button></li>
             </ul>
         </div>
     </nav>
-
     <!-- Fond noir -->
     <div class="black-background"></div>
-
+<br>
+<br>
+<br>
+<br>
     <!-- Section BTS -->
     <section class="bts section">
         <div class="container">
             <div class="moi card">
                 <h2><i class="fas fa-graduation-cap"></i> Mon BTS SIO</h2>
                 <p>
-                    Je suis actuellement en BTS SIO (Services Informatiques aux Organisations), 
-                    un diplôme d'enseignement supérieur de niveau bac+2 en France. Cette formation 
-                    de deux années se concentre sur les Technologies de l'Information et de la 
-                    Communication (TIC).
+                    Je suis actuellement en BTS SIO (Services informatiques aux organisations), une formation de deux ans de niveau bac+2 axée 
+                    sur les technologies de l'information et de la communication (TIC). 
+                    Ce diplôme forme des professionnels polyvalents capables de répondre aux besoins informatiques des organisations. 
+                    À l'issue du BTS, les diplômés peuvent intégrer le marché du travail ou poursuivre leurs études dans le domaine de l'informatique.
+                
                 </p>
 <br>
 <br>
@@ -139,13 +146,6 @@
                         </ul>
                     </div>
                 </div>
-
-                <p>
-                    Le BTS SIO forme des professionnels polyvalents capables de répondre aux 
-                    besoins informatiques des organisations. Après l'obtention du diplôme, les 
-                    lauréats peuvent intégrer le marché du travail ou poursuivre leurs études 
-                    dans le domaine de l'informatique.
-                </p>
             </div>
         </div>
     </section>
@@ -163,6 +163,7 @@
     </footer>
 
     <script src="script.js"></script>
+    <script src="theme.js"></script>
     <script>
         // Animation au défilement
         document.addEventListener('DOMContentLoaded', function() {

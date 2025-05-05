@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/base.css?v=1.0">
+    <link rel="stylesheet" href="/styles.css?v=1.0">
+    <link rel="stylesheet" href="/navbar.css?v=1.0">
+    <link rel="stylesheet" href="/animations.css?v=1.0">
+    <link rel="stylesheet" href="/black-background.css?v=1.0">
+    <link rel="stylesheet" href="themes.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Chaînes YouTube - Portfolio</title>
+    <style>
+        .veille-section {
+            background: rgba(25, 61, 80, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 40px;
+            margin: 40px auto;
+            max-width: 1200px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+        }
+
+        .veille-section h1 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            background: linear-gradient(45deg, #ffffff, #193d50);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .veille-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            padding: 20px;
+        }
+
+        .veille-card {
+            background: rgba(25, 61, 80, 0.2);
+            padding: 25px;
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .veille-card:hover {
+            transform: translateY(-5px);
+            background: rgba(25, 61, 80, 0.3);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .veille-card i {
+            font-size: 2.5rem;
+            color: #FF0000;
+            margin-bottom: 20px;
+        }
+
+        .veille-card h3 {
+            color: #ffffff;
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+
+        .veille-card p {
+            color: #a0a0a0;
+            margin-bottom: 20px;
+            font-size: 0.9rem;
+        }
+
+        .veille-card a {
+            display: inline-block;
+            padding: 10px 20px;
+            background: rgba(255, 0, 0, 0.2);
+            color: #FF0000;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .veille-card a:hover {
+            background: rgba(255, 0, 0, 0.3);
+            transform: translateX(5px);
+        }
+
+        @media (max-width: 768px) {
+            .veille-section {
+                padding: 20px;
+                margin: 20px;
+            }
+
+            .veille-section h1 {
+                font-size: 2rem;
+            }
+
+            .veille-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-solid">
+        <div class="container">
+            <ul class="onglets">
+                <div class="ptf">
+                    <h1>Portfolio</h1>
+                    <p>THEOPHILE-ADON LUKAS</p>
+                </div>
+
+                <li><a href="index.html"><i class="fas fa-home"></i> Accueil</a></li>
+                <li><a href="monbts.html"><i class="fas fa-graduation-cap"></i> Mon BTS</a></li>
+                <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+                <li><a href="mesProjets.html"><i class="fas fa-project-diagram"></i> Projets</a></li>
+                <li><a href="apropos.html"><i class="fas fa-user"></i> À propos</a></li>
+                <li><a href="veilletech.html"><i class="fas fa-newspaper"></i> Veille Tech</a></li>
+                <li><a href="epreuves.html"><i class="fas fa-file-alt"></i> Épreuves</a></li>
+                <li><a href="stages.html"><i class="fas fa-briefcase"></i> Stages</a></li>
+                <li><a href="competences.html"><i class="fas fa-tools"></i> Compétences</a></li>
+                <li><button class="theme-toggle" onclick="toggleTheme()"><i class="fas fa-sun"></i></button></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Fond noir -->
+    <div class="black-background"></div>
+
+    <!-- Section Chaînes YouTube -->
+    <section class="veille-section">
+        <h1>Chaînes YouTube de Veille Technologique</h1>
+        <div class="veille-grid">
+            <div class="veille-card">
+                <i class="fab fa-youtube"></i>
+                <h3>Underscore_</h3>
+                <p>Chaîne spécialisée dans l'Intelligence Artificielle et les nouvelles technologies</p>
+                <a href="https://www.youtube.com/@Underscore_" target="_blank">Accéder à la chaîne</a>
+            </div>
+            <div class="veille-card">
+                <i class="fab fa-youtube"></i>
+                <h3>Hasheur</h3>
+                <p>Actualités et analyses sur les cryptomonnaies et la blockchain</p>
+                <a href="https://www.youtube.com/@Hasheur" target="_blank">Accéder à la chaîne</a>
+            </div>
+            <div class="veille-card">
+                <i class="fab fa-youtube"></i>
+                <h3>TechMaker</h3>
+                <p>Tutoriels et actualités sur le développement web et mobile</p>
+                <a href="https://www.youtube.com/@TechMaker" target="_blank">Accéder à la chaîne</a>
+            </div>
+            <div class="veille-card">
+                <i class="fab fa-youtube"></i>
+                <h3>Grafikart</h3>
+                <p>Formations et tutoriels sur le développement web</p>
+                <a href="https://www.youtube.com/@grafikart" target="_blank">Accéder à la chaîne</a>
+            </div>
+            <div class="veille-card">
+                <i class="fab fa-youtube"></i>
+                <h3>Linus Tech Tips</h3>
+                <p>Actualités et tests de matériel informatique</p>
+                <a href="https://www.youtube.com/@LinusTechTips" target="_blank">Accéder à la chaîne</a>
+            </div>
+            <div class="veille-card">
+                <i class="fab fa-youtube"></i>
+                <h3>Micode</h3>
+                <p>Actualités tech et développement</p>
+                <a href="https://www.youtube.com/@Micode" target="_blank">Accéder à la chaîne</a>
+            </div>
+            <div class="veille-card">
+                <i class="fab fa-youtube"></i>
+                <h3>Le Règlement</h3>
+                <p>Musique et culture urbaine</p>
+                <a href="https://www.youtube.com/@LeReglement" target="_blank">Accéder à la chaîne</a>
+            </div>
+            <div class="veille-card">
+                <i class="fab fa-youtube"></i>
+                <h3>Joueur du Grenier</h3>
+                <p>Jeux vidéo rétro et culture gaming</p>
+                <a href="https://www.youtube.com/@JoueurduGrenier" target="_blank">Accéder à la chaîne</a>
+            </div>
+            <div class="veille-card">
+                <i class="fab fa-youtube"></i>
+                <h3>Chef Michel Dumas</h3>
+                <p>Recettes et techniques de cuisine</p>
+                <a href="https://www.youtube.com/@ChefMichelDumas" target="_blank">Accéder à la chaîne</a>
+            </div>
+            <div class="veille-card">
+                <i class="fab fa-youtube"></i>
+                <h3>Le Dessous des Cartes</h3>
+                <p>Analyse géopolitique et relations internationales</p>
+                <a href="https://www.youtube.com/@ARTE" target="_blank">Accéder à la chaîne</a>
+            </div>
+            <div class="veille-card">
+                <i class="fab fa-youtube"></i>
+                <h3>Bodybuilding.com</h3>
+                <p>Conseils sportifs et nutrition</p>
+                <a href="https://www.youtube.com/@Bodybuildingcom" target="_blank">Accéder à la chaîne</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2024 THEOPHILE-ADON LUKAS. Tous droits réservés.</p>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/lukas-theophile-adon-6044962aa/"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/script.js?v=1.0"></script>
+    <script src="theme.js"></script>
+</body>
+</html> 

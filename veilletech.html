@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="animations.css">
     <link rel="stylesheet" href="veilletech.css">
     <link rel="stylesheet" href="black-background.css">
+    <link rel="stylesheet" href="themes.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <title>Veille Technologique - Portfolio</title>
@@ -32,6 +33,9 @@
                 <li><a href="apropos.html"><i class="fas fa-user"></i> À propos</a></li>
                 <li><a href="veilletech.html"><i class="fas fa-newspaper"></i> Veille Tech</a></li>
                 <li><a href="epreuves.html"><i class="fas fa-file-alt"></i> Épreuves</a></li>
+                <li><a href="stages.html"><i class="fas fa-briefcase"></i> Stages</a></li>
+                <li><a href="competences.html"><i class="fas fa-tools"></i> Compétences</a></li>
+                <li><button class="theme-toggle" onclick="toggleTheme()"><i class="fas fa-sun"></i></button></li>
             </ul>
         </div>
     </nav>
@@ -40,6 +44,8 @@
     <div class="black-background"></div>
 
     <!-- Section Veille Technologique -->
+     <br>
+     <br>
     <section class="veille-section section">
         <div class="container">
             <h2 class="section-title"><i class="fas fa-newspaper"></i> Veille Technologique</h2>
@@ -52,12 +58,12 @@
                         <div class="tool-item">
                             <i class="fab fa-youtube"></i>
                             <h4>YouTube</h4>
-                            <p>Suivi des dernières avancées scientifiques et technologiques</p>
+                            <a href="ytb-sites.html" class="btn-site-veille" style="text-decoration: none;">Voir les chaînes YouTube</a>
                         </div>
                         <div class="tool-item">
-                            <i class="fab fa-twitter"></i>
-                            <h4>Twitter</h4>
-                            <p>Suivi des actualités tech en temps réel</p>
+                            <i class="fas fa-globe"></i>
+                            <h4>Sites de Veille</h4>
+                            <a href="sites-veille.html" class="btn-site-veille" style="text-decoration: none;">Voir les sites de veille</a>
                         </div>
                     </div>
                 </div>
@@ -71,11 +77,12 @@
                             <li><i class="fas fa-shield-alt"></i> Cybersécurité</li>
                             <li><i class="fas fa-cloud"></i> Cloud Computing</li>
                             <li><i class="fas fa-robot"></i> Intelligence Artificielle</li>
-                            <li>
-                                <a href="https://www.youtube.com/@Bitcoin" target="_blank" class="bitcoin-link">
-                                    <i class="fab fa-bitcoin"></i> Cryptomonnaies
-                                </a>
-                            </li>
+                            <li><i class="fab fa-bitcoin"></i> Cryptomonnaies</li>
+                            <li><i class="fas fa-music"></i> Musique</li>
+                            <li><i class="fas fa-gamepad"></i> Jeux Vidéo</li>
+                            <li><i class="fas fa-utensils"></i> Cuisine</li>
+                            <li><i class="fas fa-globe-americas"></i> Géopolitique</li>
+                            <li><i class="fas fa-running"></i> Sport</li>
                         </ul>
                     </div>
                 </div>
@@ -96,6 +103,7 @@
     </footer>
 
     <script src="script.js"></script>
+    <script src="theme.js"></script>
     <script>
         // Animation au défilement
         document.addEventListener('DOMContentLoaded', function() {

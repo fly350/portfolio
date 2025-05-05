@@ -3,26 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="base.css">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="navbar.css">
-    <link rel="stylesheet" href="animations.css">
+    <link rel="stylesheet" href="themes.css">
+    <link rel="stylesheet" href="black-background.css">
+    <link rel="stylesheet" href="/base.css?v=1.0">
+    <link rel="stylesheet" href="/styles.css?v=1.0">
+    <link rel="stylesheet" href="/navbar.css?v=1.0">
+    <link rel="stylesheet" href="/animations.css?v=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <title>THEOPHILE-ADON LUKAS - Portfolio</title>
     <style>
-        body {
-            background-color: rgb(0, 0, 0);
-            color: #fff;
-        }
         .hero {
-            background-color: rgba(255, 255, 255, 0.1);
+            background-color: var(--card-bg);
             backdrop-filter: blur(5px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
+            border: 1px solid var(--card-border);
             border-radius: 10px;
             padding: 20px;
             margin: 20px auto;
             max-width: 800px;
+            color: var(--text-color);
+        }
+        
+        .hero-title {
+            color: var(--text-color);
+            margin-bottom: 20px;
+        }
+        
+        .hero-subtitle {
+            color: var(--text-color);
+            margin-bottom: 30px;
+        }
+        
+        .cta-button {
+            background-color: var(--accent-color);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.3s ease;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px var(--shadow-color);
         }
     </style>
 </head>
@@ -36,7 +62,6 @@
                     <h1>Portfolio</h1>
                     <p>THEOPHILE-ADON LUKAS</p>
                 </div>
-
                 
                 <li><a href="index.html"><i class="fas fa-home"></i> Accueil</a></li>
                 <li><a href="monbts.html"><i class="fas fa-graduation-cap"></i> Mon BTS</a></li>
@@ -45,12 +70,14 @@
                 <li><a href="apropos.html"><i class="fas fa-user"></i> À propos</a></li>
                 <li><a href="veilletech.html"><i class="fas fa-newspaper"></i> Veille Tech</a></li>
                 <li><a href="epreuves.html"><i class="fas fa-file-alt"></i> Épreuves</a></li>
+                <li><a href="stages.html"><i class="fas fa-briefcase"></i> Stages</a></li>
+                <li><a href="competences.html"><i class="fas fa-tools"></i> Compétences</a></li>
+                <li><button class="theme-toggle" onclick="toggleTheme()"><i class="fas fa-sun"></i></button></li>
             </ul>
         </div>
     </nav>
-<br>
-<br>
-<!-- Section Hero -->
+
+    <!-- Section Hero -->
     <section class="hero">
         <div class="container">
             <h1 class="hero-title">Bienvenue sur mon Portfolio</h1>
@@ -74,6 +101,7 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="/script.js?v=1.0"></script>
+    <script src="theme.js"></script>
 </body>
 </html>

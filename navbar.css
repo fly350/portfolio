@@ -1,6 +1,5 @@
 /* Styles spécifiques pour la navbar */
-/* Note: La plupart des styles sont déjà définis dans base.css */
-/* Ce fichier ne contient que des styles spécifiques qui ne sont pas dans base.css */
+/* Note: Les styles de base sont définis dans themes.css */
 
 /* Ajout d'un effet de transition pour le menu mobile */
 @media (max-width: 768px) {
@@ -24,26 +23,22 @@
         z-index: 1001;
         background: transparent;
         border: none;
-        color: var(--text-color);
+        color: var(--navbar-text);
         font-size: 24px;
         cursor: pointer;
     }
 }
 
+/* Styles spécifiques pour la navbar */
 .navbar {
-    background-color: #000000;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 1000;
-    border-bottom: 1px solid rgba(255, 107, 0, 0.2);
-    padding: 5px 0;
 }
 
 .navbar .container {
     max-width: 1200px;
-    background-color: rgba(0, 0, 0, 0);
     margin: 0 auto;
     padding: 0 20px;
 }
@@ -54,6 +49,8 @@
     align-items: center;
     height: 54px;
     list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 .navbar .onglets li {
@@ -61,17 +58,16 @@
 }
 
 .navbar .onglets a {
-    color: var(--text-color);
     text-decoration: none;
     font-size: 12px;
     font-weight: 400;
     letter-spacing: -0.01em;
-    padding: 0 20px;
-    transition: color 0.3s ease;
-}
-
-.navbar .onglets a:hover {
-    color: var(--primary-color);
+    padding: 8px 20px;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border-radius: 4px;
 }
 
 .navbar .ptf {
@@ -85,17 +81,15 @@
     font-size: 21px;
     font-weight: 600;
     letter-spacing: -0.02em;
-    color: var(--primary-color);
+    margin: 0;
 }
 
 .navbar .ptf p {
     font-size: 12px;
-    color: var(--text-color);
     margin-top: -2px;
 }
 
 .navbar .menu h4 {
     font-size: 24px;
-    color: var(--primary-color);
     margin: 0;
 } 

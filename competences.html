@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="animations.css">
+    <link rel="stylesheet" href="black-background.css">
+    <link rel="stylesheet" href="themes.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Compétences - Portfolio</title>
+    <style>
+        .competences-section {
+            background: rgba(25, 61, 80, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 40px;
+            margin: 40px auto;
+            max-width: 1200px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+        }
+
+        .competence-category {
+            margin-bottom: 40px;
+        }
+
+        .competence-category h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .competence-category h2 i {
+            color: #4CAF50;
+        }
+
+        .competence-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .competence-card {
+            background: rgba(25, 61, 80, 0.2);
+            padding: 20px;
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .competence-card:hover {
+            transform: translateY(-5px);
+            background: rgba(25, 61, 80, 0.3);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .competence-card h3 {
+            color: #fff;
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .competence-card h3 i {
+            color: #4CAF50;
+        }
+
+        .competence-card ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .competence-card li {
+            color: #a0a0a0;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .competence-card li i {
+            color: #4CAF50;
+        }
+
+        @media (max-width: 768px) {
+            .competences-section {
+                padding: 20px;
+                margin: 20px;
+            }
+
+            .competence-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-solid">
+        <div class="container">
+            <ul class="onglets">
+                <div class="ptf">
+                    <h1>Portfolio</h1>
+                    <p>THEOPHILE-ADON LUKAS</p>
+                </div>
+
+                <li><a href="index.html"><i class="fas fa-home"></i> Accueil</a></li>
+                <li><a href="monbts.html"><i class="fas fa-graduation-cap"></i> Mon BTS</a></li>
+                <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+                <li><a href="mesProjets.html"><i class="fas fa-project-diagram"></i> Projets</a></li>
+                <li><a href="apropos.html"><i class="fas fa-user"></i> À propos</a></li>
+                <li><a href="veilletech.html"><i class="fas fa-newspaper"></i> Veille Tech</a></li>
+                <li><a href="epreuves.html"><i class="fas fa-file-alt"></i> Épreuves</a></li>
+                <li><a href="stages.html"><i class="fas fa-briefcase"></i> Stages</a></li>
+                <li><a href="competences.html"><i class="fas fa-tools"></i> Compétences</a></li>
+                <li><button class="theme-toggle" onclick="toggleTheme()"><i class="fas fa-sun"></i></button></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Fond noir -->
+    <div class="black-background"></div>
+
+    <!-- Section Compétences -->
+    <section class="competences-section">
+        <h1 class="section-title">Mes Compétences</h1>
+        
+        <!-- Compétences Informatiques -->
+        <div class="competence-category">
+            <h2><i class="fas fa-laptop-code"></i> Compétences Informatiques</h2>
+            <div class="competence-grid">
+                <div class="competence-card">
+                    <h3><i class="fas fa-code"></i> Développement</h3>
+                    <ul>
+                        <li><i class="fab fa-html5"></i> HTML5 - Niveau avancé</li>
+                        <li><i class="fab fa-css3-alt"></i> CSS3 - Niveau avancé</li>
+                        <li><i class="fab fa-python"></i> Python - Niveau intermédiaire</li>
+                        <li><i class="fab fa-microsoft"></i> C# - Niveau débutant</li>
+                    </ul>
+                </div>
+                <div class="competence-card">
+                    <h3><i class="fas fa-network-wired"></i> Réseaux</h3>
+                    <ul>
+                        <li><i class="fas fa-server"></i> Administration de serveurs</li>
+                        <li><i class="fas fa-shield-alt"></i> Sécurité réseau</li>
+                        <li><i class="fas fa-wifi"></i> Configuration de réseaux</li>
+                        <li><i class="fas fa-fire"></i> Pare-feu IPfire</li>
+                    </ul>
+                </div>
+                <div class="competence-card">
+                    <h3><i class="fas fa-tools"></i> Systèmes</h3>
+                    <ul>
+                        <li><i class="fab fa-windows"></i> Windows Server</li>
+                        <li><i class="fab fa-linux"></i> Linux</li>
+                        <li><i class="fas fa-cloud"></i> Virtualisation</li>
+                        <li><i class="fas fa-database"></i> Bases de données</li>
+                        <li><i class="fas fa-database"></i> Proxmox</li>
+                        <li><i class="fas fa-database"></i> Docker</li>
+                        <li><i class="fas fa-database"></i> KVM</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Compétences Musicales -->
+        <div class="competence-category">
+            <h2><i class="fas fa-music"></i> Compétences Musicales</h2>
+            <div class="competence-grid">
+                <div class="competence-card">
+                    <h3><i class="fas fa-guitar"></i> Instruments</h3>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Ka Guadeloupéen - Niveau Professionnel </li>
+                        <li><i class="fas fa-check"></i> Piano - Niveau débutant</li>
+                        <li><i class="fas fa-check"></i> Production musicale - Niveau Professionnel</li>
+                        <li><i class="fas fa-check"></i> Guitare Bass - Niveau débutant</li>
+                        <li><i class="fas fa-check"></i> Batterie - Niveau intermédiaire</li>
+                    </ul>
+                </div>
+                <div class="competence-card">
+                    <h3><i class="fas fa-headphones"></i> Logiciels Audio</h3>
+                    <ul>
+                        <li><i class="fas fa-check"></i> FL Studio - Niveau professionnel</li>
+                        <li><i class="fas fa-check"></i> Logic Pro X - Niveau intermédiaire</li>
+                        <li><i class="fas fa-check"></i> Serato DJ Pro - Niveau Professionnel</li>
+                        <li><i class="fas fa-check"></i> Izotope RX 10 - Niveau intermédiaire</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Compétences Culinaires -->
+        <div class="competence-category">
+            <h2><i class="fas fa-utensils"></i> Compétences Culinaires</h2>
+            <div class="competence-grid">
+                <div class="competence-card">
+                    <h3><i class="fas fa-utensil-spoon"></i> Cuisine</h3>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Cuisine Antillaise - Niveau intermédiaire</li>
+                        <li><i class="fas fa-check"></i> Cuisine asiatique - Niveau débutant</li>
+                        <li><i class="fas fa-check"></i> Pâtisserie - Niveau débutant</li>
+                        <li><i class="fas fa-check"></i> Agro transformation - Niveau intermédiaire</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Compétences Sportives -->
+        <div class="competence-category">
+            <h2><i class="fas fa-running"></i> Compétences Sportives</h2>
+            <div class="competence-grid">
+                <div class="competence-card">
+                    <h3><i class="fas fa-dumbbell"></i> Sports</h3>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Musculation - Niveau intermédiaire</li>
+                        <li><i class="fas fa-check"></i> Course à pied - Niveau intermédiaire</li>
+                        <li><i class="fas fa-check"></i> Natation - Niveau professionnel</li>
+                        <li><i class="fas fa-check"></i> Équitation  - Niveau débutant</li>
+                        <li><i class="fas fa-check"></i> Football - Niveau intermédiaire</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2024 THEOPHILE-ADON LUKAS. Tous droits réservés.</p>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/lukas-theophile-adon-6044962aa/"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="theme.js"></script>
+</body>
+</html> 

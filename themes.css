@@ -1,0 +1,346 @@
+/* Thème clair */
+:root[data-theme="light"] {
+    --bg-color: #ffffff;
+    --text-color: #193d50;
+    --card-bg: rgba(25, 61, 80, 0.05);
+    --card-border: rgba(0, 0, 0, 0.1);
+    --section-bg: rgba(25, 61, 80, 0.05);
+    --section-border: rgba(0, 0, 0, 0.1);
+    --link-color: #193d50;
+    --hover-color: #4CAF50;
+    --footer-bg: rgba(25, 61, 80, 0.05);
+    --footer-text: #193d50;
+    --navbar-bg: #ffffff;
+    --navbar-text: #193d50;
+    --navbar-hover: #4CAF50;
+    --navbar-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    --primary-color: #193d50;
+    --accent-color: #4CAF50;
+    --border-color: rgba(0, 0, 0, 0.1);
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    --icon-color: #193d50;
+    --icon-hover: #4CAF50;
+}
+
+/* Thème sombre (par défaut) */
+:root[data-theme="dark"] {
+    --bg-color: #000000;
+    --text-color: #ffffff;
+    --card-bg: rgba(25, 61, 80, 0.2);
+    --card-border: rgba(255, 255, 255, 0.1);
+    --section-bg: rgba(25, 61, 80, 0.1);
+    --section-border: rgba(255, 255, 255, 0.1);
+    --link-color: #4CAF50;
+    --hover-color: #ffffff;
+    --footer-bg: rgba(25, 61, 80, 0.2);
+    --footer-text: #ffffff;
+    --navbar-bg: #000000;
+    --navbar-text: #ffffff;
+    --navbar-hover: #4CAF50;
+    --navbar-shadow: 0 2px 5px rgba(255, 255, 255, 0.1);
+    --primary-color: #4CAF50;
+    --accent-color: #4CAF50;
+    --border-color: rgba(255, 255, 255, 0.1);
+    --shadow-color: rgba(255, 255, 255, 0.1);
+    --icon-color: #ffffff;
+    --icon-hover: #4CAF50;
+}
+
+/* Application des couleurs */
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+/* Styles de la navbar */
+.navbar {
+    background-color: var(--navbar-bg);
+    color: var(--navbar-text);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 15px 0;
+    box-shadow: var(--navbar-shadow);
+    border-bottom: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+}
+
+/* Styles spécifiques pour la navbar en mode solide */
+.navbar.navbar-solid {
+    background-color: var(--navbar-bg);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.navbar.navbar-solid .onglets a {
+    color: var(--navbar-text) !important;
+}
+
+.navbar.navbar-solid .onglets a:hover {
+    color: var(--navbar-hover) !important;
+    background-color: var(--card-bg);
+}
+
+.navbar.navbar-solid .onglets a i {
+    color: var(--icon-color) !important;
+}
+
+.navbar.navbar-solid .onglets a:hover i {
+    color: var(--icon-hover) !important;
+}
+
+.navbar.navbar-solid .ptf h1 {
+    color: var(--primary-color) !important;
+}
+
+.navbar.navbar-solid .ptf p {
+    color: var(--navbar-text) !important;
+}
+
+.navbar .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.navbar .onglets {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 54px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar .onglets li {
+    margin: 0;
+}
+
+.navbar .onglets a {
+    color: var(--navbar-text) !important;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: -0.01em;
+    padding: 8px 20px;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.navbar .onglets a:hover {
+    color: var(--navbar-hover) !important;
+    transform: translateY(-2px);
+    background-color: var(--card-bg);
+}
+
+.navbar .onglets a i {
+    color: var(--icon-color) !important;
+    transition: all 0.3s ease;
+    font-size: 14px;
+}
+
+.navbar .onglets a:hover i {
+    color: var(--icon-hover) !important;
+    transform: scale(1.1);
+}
+
+.navbar .ptf {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.navbar .ptf h1 {
+    font-family: var(--font-display);
+    font-size: 21px;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    color: var(--primary-color) !important;
+    margin: 0;
+    transition: color 0.3s ease;
+}
+
+.navbar .ptf p {
+    font-size: 12px;
+    color: var(--navbar-text) !important;
+    margin-top: -2px;
+    transition: color 0.3s ease;
+}
+
+/* Ajustement du contenu principal pour la navbar fixe */
+main {
+    margin-top: 84px;
+    padding-top: 20px;
+    transition: margin-top 0.3s ease;
+}
+
+/* Styles des titres */
+h1 {
+    margin-top: 0;
+    padding-top: 20px;
+    text-align: center;
+    color: var(--text-color);
+    transition: color 0.3s ease;
+}
+
+/* Styles des blocs de texte */
+.text-block, .content-block, .description-block {
+    background-color: var(--card-bg);
+    color: var(--text-color);
+    border: 1px solid var(--card-border);
+    padding: 20px;
+    border-radius: 8px;
+    margin: 10px 0;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
+/* Styles des cartes */
+.card, .competence-card, .veille-card, .epreuve-card, .project-card, .stage-card {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    color: var(--text-color);
+    transition: all 0.3s ease;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.card:hover, .competence-card:hover, .veille-card:hover, .epreuve-card:hover, .project-card:hover, .stage-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Styles des sections */
+.section, .competences-section, .veille-section, .epreuve-section, .projects-section, .stages-section {
+    background: var(--section-bg);
+    border: 1px solid var(--section-border);
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px auto;
+    max-width: 1200px;
+    width: 100%;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
+/* Styles des liens */
+a {
+    color: var(--link-color);
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--hover-color);
+}
+
+/* Styles du footer */
+footer {
+    background-color: var(--footer-bg);
+    color: var(--footer-text);
+    padding: 20px;
+    margin-top: 40px;
+    border-top: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+}
+
+/* Style du bouton de basculement */
+.theme-toggle {
+    background: none;
+    border: none;
+    color: var(--navbar-text) !important;
+    cursor: pointer;
+    padding: 8px;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: all 0.3s ease;
+    border-radius: 4px;
+}
+
+.theme-toggle:hover {
+    transform: scale(1.1);
+    color: var(--navbar-hover) !important;
+    background-color: var(--card-bg);
+}
+
+.theme-toggle i {
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+}
+
+/* Styles spécifiques pour les éléments qui doivent garder leur couleur */
+.social-links a i,
+.veille-card i,
+.stage-header i {
+    color: #4CAF50;
+    transition: all 0.3s ease;
+}
+
+.social-links a:hover i,
+.veille-card:hover i,
+.stage-header:hover i {
+    transform: scale(1.1);
+}
+
+/* Ajustement des couleurs de texte dans les cartes */
+.card h2, .card h3, .card h4, .card p,
+.competence-card h2, .competence-card h3, .competence-card p,
+.veille-card h3, .veille-card p,
+.epreuve-card h3, .epreuve-card p,
+.project-card h3, .project-card p,
+.stage-card h3, .stage-card p {
+    color: var(--text-color);
+    transition: color 0.3s ease;
+}
+
+/* Conteneur principal */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Ajustement des grilles */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Ajustement des flexbox */
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 100%;
+    box-sizing: border-box;
+} 

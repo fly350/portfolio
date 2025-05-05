@@ -8,8 +8,8 @@
 }
 
 body {
-    font-family: var(--font-primary);
-    background-color: var(--bg-dark);
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-color);
     color: var(--text-color);
     line-height: 1.5;
     overflow-x: hidden;
@@ -17,13 +17,13 @@ body {
 
 /* Navigation commune */
 .navbar {
-    background-color: #000000;
+    background-color: var(--navbar-bg);
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 1000;
     border-bottom: 1px solid var(--border-color);
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    box-shadow: var(--navbar-shadow);
 }
 
 .container {
@@ -45,24 +45,18 @@ body {
 }
 
 .onglets a {
-    color: var(--text-color);
+    color: var(--navbar-text);
     text-decoration: none;
     font-size: 12px;
-    font-weight: 400;
-    letter-spacing: -0.01em;
-    padding: 0 20px;
-    transition: var(--transition);
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.onglets a i {
-    font-size: 14px;
+    transition: color 0.3s ease;
 }
 
 .onglets a:hover {
-    color: var(--accent-color);
+    color: var(--navbar-hover);
+}
+
+.onglets a i {
+    margin-right: 5px;
 }
 
 .ptf {
@@ -72,50 +66,40 @@ body {
 }
 
 .ptf h1 {
-    font-family: var(--font-display);
-    font-size: 21px;
+    font-size: 18px;
     font-weight: 600;
-    letter-spacing: -0.02em;
-    color: var(--text-color);
+    color: var(--navbar-text);
+    margin: 0;
 }
 
 .ptf p {
     font-size: 12px;
-    color: var(--text-light);
-    margin-top: -2px;
+    color: var(--navbar-text);
+    margin: 0;
 }
 
 .menu h4 {
     font-size: 14px;
     font-weight: 500;
-    color: var(--text-light);
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
+    color: var(--text-color);
+    margin-bottom: 10px;
 }
 
 /* Vidéo de fond commune */
 video {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
+    width: 100%;
+    max-width: 800px;
     height: auto;
-    z-index: -1;
-    filter: blur(20px);
-    object-fit: cover;
-    opacity: 0.3;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px var(--shadow-color);
 }
 
 /* Sections communes */
 .section {
-    padding: 120px 0;
+    padding: 40px 0;
     opacity: 0;
     transform: translateY(20px);
-    transition: var(--transition);
-    background: var(--bg-dark);
+    transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
 .section.visible {
@@ -124,52 +108,41 @@ video {
 }
 
 .section-title {
-    font-family: var(--font-display);
-    font-size: 48px;
+    font-size: 24px;
     font-weight: 600;
-    letter-spacing: -0.02em;
-    text-align: center;
-    margin-bottom: 60px;
     color: var(--text-color);
+    margin-bottom: 20px;
+    text-align: center;
 }
 
 /* Cards communes */
 .card {
-    background: var(--card-bg);
-    border-radius: 18px;
-    padding: 40px;
-    box-shadow: 0 4px 24px var(--shadow-color);
-    transition: var(--transition);
-    border: 1px solid var(--border-color);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    background-color: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 32px var(--shadow-color);
-    border-color: var(--accent-color);
+    box-shadow: 0 4px 12px var(--shadow-color);
 }
 
 /* Boutons communs */
 .btn {
-    background: var(--accent-color);
-    color: white;
-    padding: 12px 24px;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 14px;
-    font-weight: 500;
-    transition: var(--transition);
-    text-decoration: none;
     display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--accent-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
 }
 
 .btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px var(--shadow-color);
-    background: #0055b3;
+    background-color: var(--hover-color);
 }
 
 /* Formulaires communs */
@@ -179,36 +152,30 @@ video {
 
 .form-control {
     width: 100%;
-    padding: 12px 16px;
+    padding: 10px;
     border: 1px solid var(--border-color);
-    border-radius: 8px;
-    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    background-color: var(--card-bg);
     color: var(--text-color);
-    transition: var(--transition);
-    font-family: var(--font-primary);
-    font-size: 16px;
 }
 
 .form-control::placeholder {
-    color: var(--text-light);
+    color: var(--text-color);
+    opacity: 0.7;
 }
 
 .form-control:focus {
     outline: none;
     border-color: var(--accent-color);
-    box-shadow: 0 0 0 3px var(--hover-color);
-    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 0 0 2px var(--shadow-color);
 }
 
 /* Footer commun */
 footer {
-    background-color: #000000;
-    padding: 40px 0;
-    border-top: 1px solid var(--border-color);
-    position: relative;
-    bottom: 0;
-    width: 100%;
-    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.5);
+    background-color: var(--footer-bg);
+    color: var(--footer-text);
+    padding: 20px 0;
+    margin-top: 40px;
 }
 
 .footer-content {
@@ -219,18 +186,17 @@ footer {
 
 .social-links {
     display: flex;
-    gap: 20px;
+    gap: 15px;
 }
 
 .social-links a {
-    color: var(--text-light);
+    color: var(--icon-color);
     font-size: 20px;
-    transition: var(--transition);
+    transition: color 0.3s ease;
 }
 
 .social-links a:hover {
-    color: var(--accent-color);
-    transform: translateY(-2px);
+    color: var(--icon-hover);
 }
 
 /* Animations communes */
@@ -248,18 +214,19 @@ footer {
 /* Responsive commun */
 @media (max-width: 768px) {
     .section {
-        padding: 80px 0;
+        padding: 20px 0;
     }
     
     .section-title {
-        font-size: 36px;
+        font-size: 20px;
     }
     
     .onglets {
-        display: none;
+        flex-direction: column;
+        height: auto;
     }
     
     .card {
-        padding: 30px 20px;
+        padding: 15px;
     }
 } 
