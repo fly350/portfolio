@@ -1,3 +1,145 @@
+/* Styles de base pour la navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background: #111;
+    border-bottom: 1px solid #222;
+    z-index: 1000;
+    height: 60px;
+    transition: transform 0.3s ease;
+}
+
+.navbar .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Style du logo */
+.ptf {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.ptf h1 {
+    font-family: var(--font-display);
+    color: #4caf50;
+    font-size: 21px;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    margin: 0;
+}
+
+.ptf p {
+    color: #fff;
+    font-size: 12px;
+    margin: -2px 0 0 0;
+    opacity: 0.8;
+}
+
+/* Style des liens de navigation */
+.onglets {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    height: 54px;
+}
+
+.onglets li {
+    margin: 0;
+}
+
+.onglets li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: -0.01em;
+    padding: 8px 20px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.onglets li a:hover {
+    background: #4caf50;
+    color: #fff;
+}
+
+/* Style du bouton thème */
+.theme-toggle {
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.theme-toggle:hover {
+    background: #4caf50;
+}
+
+/* Ajustement pour le contenu sous la navbar */
+body {
+    padding-top: 60px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .navbar {
+        height: auto;
+    }
+
+    .navbar .container {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .ptf {
+        margin-bottom: 10px;
+    }
+
+    .onglets {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        height: auto;
+    }
+
+    .onglets li a {
+        padding: 6px 10px;
+        font-size: 0.9rem;
+    }
+
+    .menu-toggle {
+        display: block;
+        position: fixed;
+        top: 10px;
+        right: 20px;
+        z-index: 1001;
+        background: transparent;
+        border: none;
+        color: var(--navbar-text);
+        font-size: 24px;
+        cursor: pointer;
+    }
+}
+
 /* Styles spécifiques pour la navbar */
 /* Note: Les styles de base sont définis dans themes.css */
 
